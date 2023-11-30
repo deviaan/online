@@ -1,12 +1,10 @@
 <?php
-$pdo = new PDO(
-    'mysql:dbname=' . $_ENV["MYSQL_DATABASE"] . ';host=mysql',
-    $_ENV["MYSQL_USER"],
-    $_ENV["MYSQL_PASSWORD"],
-    [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]
-);
+require_once '../src/db.php';
+require_once '../src/models/PostModel.php';
 
-$query = $pdo->query('SHOW VARIABLES like "version"');
-$row = $query->fetch();
+$post_manager = new \models\PostManager($pdo);
+$posts = $post_manager->getPosts();
 
-echo 'MySQL version ' . $row['Value'];
+foreach ($posts as $post) {
+    echo $post->title;
+}

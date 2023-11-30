@@ -9,4 +9,6 @@ Then run `docker-compose up` to create & run the containers.
 
 
 ## Sources
-Docker set up was done by following [this guide](https://www.sitepoint.com/docker-php-development-environment).
+Docker set up was done by following [this guide](https://www.sitepoint.com/docker-php-development-environment).  
+Core PHP Fundamentals from [Learning PHP, MySQL, and JavaScript](https://www.oreilly.com/library/view/learning-php-mysql/9781492093817/).  
+The rest was made by using [PHP The Right Way](https://phptherightway.com/).  
