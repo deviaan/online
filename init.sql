@@ -26,11 +26,30 @@ CREATE TABLE post_tags (
     post_id INT UNSIGNED NOT NULL,
     tag_id SMALLINT UNSIGNED NOT NULL,
     CONSTRAINT `fk_post_id`
-           FOREIGN KEY (post_id) REFERENCES posts (id)
-           ON DELETE CASCADE
-           ON UPDATE RESTRICT,
+       FOREIGN KEY (post_id) REFERENCES posts (id)
+       ON DELETE CASCADE
+       ON UPDATE RESTRICT,
     CONSTRAINT `fk_tag_id`
            FOREIGN KEY (tag_id) REFERENCES tags (id)
            ON DELETE CASCADE
            ON UPDATE RESTRICT
+);
+
+CREATE TABLE series (
+    id INT UNSIGNED NOT NULL AUTO_INCREMENT KEY,
+    name VARCHAR(128) NOT NULL
+);
+
+CREATE TABLE post_series (
+    post_id INT UNSIGNED NOT NULL,
+    series_id INT UNSIGNED NOT NULL,
+    part SMALLINT NOT NULL,
+    CONSTRAINT `fk_series_post_id`
+        FOREIGN KEY (post_id) REFERENCES posts (id)
+        ON DELETE CASCADE
+        ON UPDATE RESTRICT,
+    CONSTRAINT `fk_series_id`
+        FOREIGN KEY (series_id) REFERENCES series (id)
+        ON DELETE CASCADE
+        ON UPDATE RESTRICT
 );

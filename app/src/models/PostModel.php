@@ -2,7 +2,6 @@
 
 namespace models;
 
-use DateTimeInterface;
 use PDO;
 
 
