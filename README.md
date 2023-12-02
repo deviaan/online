@@ -21,5 +21,4 @@ Core PHP Fundamentals from [Learning PHP, MySQL, and JavaScript](https://www.ore
 The rest was made by using [PHP The Right Way](https://phptherightway.com/) as reference along with posts and tutorials from around the net.  
 
 Tutorials:
-- [Getting Started with PHP Templating](https://www.smashingmagazine.com/2011/10/getting-started-with-php-templating/)
 - [PHP is A-OK for Templating](https://css-tricks.com/php-is-a-ok-for-templating/)
